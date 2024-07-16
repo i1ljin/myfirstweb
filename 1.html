@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>introduce web</title>
+    <meta charset="utf-8">
+    <style>
+        a {
+            color:rgb(221, 0, 255);
+            text-decoration: overline;
+        }
+        .korea {
+            color: rgb(10, 101, 220);
+            text-decoration: none;
+        }
+        h1 {
+            text-align: center;
+            border-width: 5px;
+            border-color: gold;
+            border-style: solid;
+
+            padding: 20px;
+            margin: 20px;
+        }
+        div { 
+            border: 5px, solid, 
+            gray;
+            display: grid;
+            grid-template-columns: 100px, 1fr;
+        }
+        #gri {
+            border: 5px, solid pink;
+            
+        }
+        @media(max-width:700px){
+            #gri{
+                display: none;
+            }
+        }    
+        </style>
+
+        <script>
+            document.write(1+1);
+        </script>
+        
+</head>
+
+<body>
+    <h1>나를 소개합니다.</h1>
+    <ol>
+        <li><a href="https://www.naver.com/" target="_blank">네이버</a></li>
+        <li><a href="https://www.daum.net" class="korea" target="_blank" id="daum">다음</a></li>
+        
+    </ol>
+    <div id="gri">
+        <div>sefo oebsdf</div>
+        <div>navigation</div>
+    </div>
+    <input type="button" 
+    value="button"
+    onclick="alert('hi')"   >
+    <input type="text"
+    onchange="alert('changed')">
+    <input type="button"value="day" onclick="
+        if(document.querySelector('body').dataset.mode ==='night'){
+            document.querySelector('body').style.backgroundColor = 'white' ;
+            document.querySelector('body').style.color = 'black';
+            
+            document.querySelector('body').dataset.mode = 'day';
+            
+            this.value = 'day';
+        }
+        else{
+            document.querySelector('body').style.backgroundColor = 'black' ;
+            document.querySelector('body').style.color = 'white';
+            
+            document.querySelector('body').dataset.mode = 'night';
+            
+            this.value = 'night';
+            
+            
+            
+        }
+        ">
+</body>
+</html>
